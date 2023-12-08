@@ -1,3 +1,10 @@
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/Sirius-Bell/TeleBD?style=flat-square)
+![GitHub](https://img.shields.io/github/license/Sirius-Bell/TeleBD?style=flat-square)
+
 # TeleBD
 
 TeleBD is a project designed to simplify and streamline the management of MySQL databases through the popular messaging app Telegram.
