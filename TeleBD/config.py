@@ -8,18 +8,21 @@
 import os
 import sys
 
-from dotenv import load_dotenv
 from loguru import logger
-from db_connect import DatabaseConnect
+from pydantic import SecretStr
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
-load_dotenv()
 
-HOST: str = os.getenv('HOST')
-PORT: int = int(os.getenv('PORT'))
-USER: str = os.getenv('USER')
-PASSWORD: str = os.getenv('PASSWORD')
-DATABASE: str = os.getenv('DATABASE_NAME')
-TOKEN: str = os.getenv('TOKEN')
+class Settings(BaseSettings):
+    token: SecretStr
+    host: SecretStr
+    port: SecretStr
+    user: SecretStr
+    password: SecretStr
+    database_name: SecretStr
+
+    model_config = SettingsConfigDict(env_file='.env', env_file_encoding='utf-8')
+
 
 LEVEL: str = "DEBUG"
 
@@ -30,4 +33,4 @@ logger.add(sys.stderr,
            format="<green>[{time:YYYY-MM-DD at HH:mm:ss}]</green> <cyan>[{level}]</cyan>: <level>{message}</level>",
            level=LEVEL, colorize=True)
 
-db = DatabaseConnect(HOST, PORT, USER, PASSWORD, DATABASE)
+config = Settings()
