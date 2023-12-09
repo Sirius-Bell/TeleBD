@@ -19,6 +19,7 @@ PORT: int = int(os.getenv('PORT'))
 USER: str = os.getenv('USER')
 PASSWORD: str = os.getenv('PASSWORD')
 DATABASE: str = os.getenv('DATABASE_NAME')
+TOKEN: str = os.getenv('TOKEN')
 
 LEVEL: str = "DEBUG"
 
