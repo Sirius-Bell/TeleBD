@@ -5,9 +5,11 @@
 # Python 3.12
 
 import asyncio
-import aiomysql
-from config import logger
 from asyncio import AbstractEventLoop
+
+import aiomysql
+
+from config import logger
 
 
 class DatabaseConnect:
