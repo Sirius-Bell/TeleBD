@@ -6,3 +6,6 @@ logs/
 
 # Ignore poetry lockfile
 poetry.lock
+
+# Ignore environment
+.env
