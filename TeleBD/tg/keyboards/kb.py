@@ -14,4 +14,10 @@ menu = [
     [InlineKeyboardButton(text="Все услуги", callback_data="all_option")]
 ]
 
-menu = InlineKeyboardMarkup(inline_keyboard=menu, resize_keyboard=True, input_field_placeholder="Выберите действие")
+menu = InlineKeyboardMarkup(inline_keyboard=menu)
+
+cancel = [
+    [InlineKeyboardButton(text="❌ Отменить действие", callback_data="cancel_")]
+]
+
+cancel = InlineKeyboardMarkup(inline_keyboard=cancel)
