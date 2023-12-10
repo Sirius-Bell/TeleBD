@@ -9,7 +9,7 @@ from aiogram import Router, F
 from aiogram.filters import CommandStart, StateFilter, Command
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import default_state
-from aiogram.types import Message
+from aiogram.types import Message, CallbackQuery
 from tg.keyboards.kb import menu
 from loguru import logger
 
@@ -34,6 +34,8 @@ async def cmd_cancel_not(msg: Message, state: FSMContext):
 
 @common_router.message(Command(commands=["cancel"]))
 @common_router.message(F.text.lower() == "отмена")
-async def cmd_cancel(message: Message, state: FSMContext):
+@common_router.callback_query(F.data == "cancel_")
+async def cmd_cancel(callback: CallbackQuery, state: FSMContext):
     await state.clear()
-    await message.answer(text="Действие отменено")
+    await callback.message.answer(text="Действие отменено")
+    await callback.answer()
