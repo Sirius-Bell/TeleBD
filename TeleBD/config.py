@@ -8,6 +8,9 @@
 import os
 import sys
 
+from aiogram import Bot, Dispatcher
+from aiogram.enums import ParseMode
+from aiogram.fsm.storage.memory import MemoryStorage
 from loguru import logger
 from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -34,3 +37,6 @@ logger.add(sys.stderr,
            level=LEVEL, colorize=True)
 
 config = Settings()
+
+bot = Bot(config.token.get_secret_value(), parse_mode=ParseMode.HTML)
+dp = Dispatcher(storage=MemoryStorage())
