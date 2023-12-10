@@ -10,7 +10,7 @@ from aiogram.filters import CommandStart, StateFilter, Command
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import default_state
 from aiogram.types import Message
-from tg.kb import menu
+from tg.keyboards.kb import menu
 from loguru import logger
 
 common_router = Router()

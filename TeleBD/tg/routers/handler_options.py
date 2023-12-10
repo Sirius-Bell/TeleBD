@@ -9,7 +9,7 @@ from aiogram.filters import StateFilter, Command
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message, CallbackQuery
 from loguru import logger
-from tg.states import AddOption
+from tg.states.state_add import AddOption
 
 router = Router()
 

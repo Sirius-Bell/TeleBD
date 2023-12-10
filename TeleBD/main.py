@@ -12,8 +12,8 @@ from aiogram.enums import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
 
 from config import logger, config
-from tg.handler_options import router
-from tg.common import common_router
+from TeleBD.tg.routers.handler_options import router
+from TeleBD.tg.routers.common import common_router
 
 
 async def main():
