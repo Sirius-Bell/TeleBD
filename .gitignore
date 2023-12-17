@@ -9,3 +9,6 @@ poetry.lock
 
 # Ignore environment
 tele_bd/.env
+
+# Ignore build files
+docs/_build
