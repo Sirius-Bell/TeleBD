@@ -8,4 +8,4 @@ logs/
 poetry.lock
 
 # Ignore environment
-TeleBD/.env
+tele_bd/.env
